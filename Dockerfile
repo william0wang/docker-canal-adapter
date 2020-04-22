@@ -8,7 +8,7 @@ RUN apk add --update bash ca-certificates openssl curl
 ENV SHELL /bin/bash
 
 RUN mkdir -p /opt/canal/adapter
-RUN curl -L  https://github.com/alibaba/canal/releases/download/canal-1.1.4/canal.adapter-1.1.4.tar.gz | tar xvf -C /opt/canal/adapter
+RUN curl -L  https://github.com/alibaba/canal/releases/download/canal-1.1.4/canal.adapter-1.1.4.tar.gz | tar xvz -C /opt/canal/adapter
 # ADD canal.adapter-1.1.4 /opt/canal/adapter
 
 WORKDIR /opt/canal/adapter
